@@ -15,10 +15,10 @@ const candies = [
 ];
 
 
-const searchCandies = (str) => {
+const searchCandies = (str, price) => {
   let arr = [];
   candies.filter(candy => {
-    if (candy['name'].includes(str)) {
+    if (candy['name'].includes(str) && candy['price'] < price) {
       arr.push(candy['name'])
     };
    } );
