@@ -14,11 +14,28 @@ const candies = [
   { name: 'Fraise Tagada', price: 5.99 }
 ];
 
+
 const searchCandies = (str) => {
-  candies.map((candy) => {
+  
+  candies.filter(func(str){
     console.log(candy['name'])
   })
-}
+};
 
+  // (candy => {
+  //   if(candy['name'].include(str)){
+  //     return true
+  //   }
+
+// const searchCandies = (str) => {
+//   candies.map(candy => {
+//     candy['name'].filter( str => {
+//       return true
+//   })
+
+//   })
+// }
+
+// console.log(searchCandies('MA'))
 
 module.exports = searchCandies;
