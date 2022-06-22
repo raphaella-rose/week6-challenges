@@ -15,10 +15,17 @@ const candies = [
 ];
 
 
+const capitalize = (str) => {
+  let first_character = str.charAt(0);
+  first_character.toUpperCase();
+  return first_character.toUpperCase() + str.slice(1)
+
+}
+
 const searchCandies = (str, price) => {
   let arr = [];
   candies.filter(candy => {
-    if (candy['name'].includes(str) && candy['price'] < price) {
+    if (candy['name'].includes(capitalize(str)) && candy['price'] < price) {
       arr.push(candy['name'])
     };
    } );
